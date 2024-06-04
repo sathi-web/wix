@@ -18,11 +18,13 @@ h1,h2,h3,h4,h5,h6 p{
     margin: 0 auto;
 }
 nav{
-    background: linear-gradient(rgba(0, 0, 0, 0.329),rgba(0, 0, 0, 0.466)),url(../images/banner.jpg);
     /* background-position: center; */
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 30px;
+    position: absolute;
+    padding-top: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* background-color: red; */
 }
 .nav-wrapper{
     display: flex;
@@ -51,21 +53,38 @@ nav{
     -o-transition: all linear 0.3s;
     cursor: pointer;
 }
-.nav-content{
+
+
+#toggleMenu i{
+    font-size: 22px;
+    color: #fff;
+    
+}
+/* -----------banner---------- */
+#banner{
+    background: linear-gradient(rgba(0, 0, 0, 0.329),rgba(0, 0, 0, 0.466)),url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 0 200px 0;
+    background-position: center;
+    max-width: 100%;
+
+}
+.banner-content{
     padding-top: 280px;
     margin-bottom: 380px;
-    width: 596px;
+    max-width: 596px;
     margin: 0 auto;
     text-align: center;
 }
-.nav-content h3{
+.banner-content h3{
     text-transform: capitalize;
     color: #fff;
     font-size: 36px;
     font-weight: 500;
     font-family: "Raleway", sans-serif;
 }
-.nav-content h2{
+.banner-content h2{
     text-transform: capitalize;
     color: #fff;
     font-size: 52px;
@@ -73,7 +92,7 @@ nav{
     font-family: "Raleway", sans-serif;
     padding-top: 20px;
 }
-.nav-content p{
+.banner-content p{
     text-transform: capitalize;
     color: #fff;
     font-size: 16px;
@@ -163,6 +182,7 @@ nav{
 #slider{
     background-color: #f8f6f2;
     padding: 85px 0;
+    margin: 50px 0;
 }
 .content{
     text-align: center;
@@ -187,7 +207,31 @@ nav{
 }
 .images{
     display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 60px;
     
+}
+.img-1{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 770px;
+    height: 440px;
+}
+.img-3{
+    position: absolute;
+    left: 139px;
+    top: -30px;
+    width: 770px;
+    height: 540px;
+}
+.img-2{
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 770px;
+    height: 440px;
 }
 
 
@@ -197,7 +241,7 @@ nav{
 
 /* ------------project-part----------- */
 #project{
-    margin: 50px 0;
+    margin: 150px 0;
 }
 
 .project-content{
@@ -510,7 +554,7 @@ nav{
     line-height: 22px;
     padding-bottom: 30px;
 }
-.slider{
+.xyz{
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
@@ -518,6 +562,8 @@ nav{
 .slicks-img{
     width: 370px;
     height: 400px;
+    padding-left: 40px;
+
 }
 .img-item{
     width: 370px;
@@ -555,9 +601,8 @@ span{
     padding: 20px 12px;
 }
 
-.slider .slick-center .slick-content{
-    background-color:aqua;
-    margin-top: -10px;
+.xyz .slick-center .slicks-img{
+    background-color: red;
 }
 .slick-dots{
     display: flex;
@@ -569,12 +614,97 @@ span{
 .slick-dots li{
     width: 10px;
     height: 10px;
-    background-color: #7B7B7B;
+    background-color: green;
     border-radius: 50%;
 }
 .slick-dots li button{
     display: none;
 }
 .slick-dots .slick-active{
-    background-color: black;
+    background-color: red;
+}
+
+/* ----------logo----------- */
+
+#logo{
+    background:linear-gradient(#0000008a,#0000006f),url(../images/background.jpg);
+    margin-top: 60px;
+    height: 495px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 1px solid #fff;
+}
+.logo-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 120px;
+    gap: 60px;
+}
+.img-items{
+    width: 240px;
+    /* height: 140px; */
+    overflow: hidden;
+}
+
+.img-items img{
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+}
+
+
+/* -----------footer----------- */
+#footer{
+    background-color: #191919;
+}
+.footer-wrapper{
+    display: flex;
+    gap: 30px;
+    padding: 90px 0;
+}
+.footer-item{
+    width: 265px;
+    height: 300px;
+    padding: 20px 10px;
+}
+
+.footer-item p{
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    padding: 10px 0;
+    line-height: 18px;
+    color: #555555;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+}
+.footer-item h3{
+    color: #fff;
+    font-size: 25px;
+    text-transform: capitalize;
+}
+.footer-item h4{
+    padding-top: 15px;
+    color: #d38037;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+.img-wrapper{
+    width: 265px;
+    margin-top: 50px;
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+}
+.img{
+    width: 125px;
+    height: 100px;
+    overflow: hidden;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

@@ -1,12 +1,12 @@
 // 
-var mixer = mixitup('.project-img', {
-    selectors: {
-        target: '.mixit_item'
-    },
-    animation: {
-        duration: 300
-    }
-  });
+// var mixer = mixitup('.project-img', {
+//     selectors: {
+//         target: '.mixit_item'
+//     },
+//     animation: {
+//         duration: 300
+//     }
+//   });
   $(function(){
     lightbox.option({
       'resizeDuration': 200,
@@ -27,10 +27,22 @@ var mixer = mixitup('.project-img', {
 $('.xyz').slick({
   infinite: true,
   slidesToShow: 3,
-  slidesToScroll: 3
+  slidesToScroll: 1,
+  centerMode: true,
+  dots:true,
+  arrows:false,
+  autoplay: true,
+  autoplaySpeed: 2000,
 });
-		
+
 
 });
-//slick
+$(function(){
+  $("#toggleMenu").click(function(){
+      $(".nav-menu").toggleClass("toggle");
+      // console.log("click");
+  });
+});
+console.log("click");
+
 
